@@ -18,20 +18,13 @@ const NavContainer = styled(Flex)`
   background: ${({theme: {bgColor}}) => bgColor};
 `;
 
-export class Navbar extends Component {
-  render() {
-
-    const {
-      theme
-    } = this.props;
-
-    return (
-      <NavContainer theme={theme}>
-        <NavLogo textColor={theme.textColor}>logo</NavLogo>
-        <NavItems {...this.props} />
-      </NavContainer>
-    );
-  }
+const Navbar = (props) => {
+  return (
+    <NavContainer theme={props.theme}>
+      <NavLogo textColor={props.theme.textColor}>logo</NavLogo>
+      <NavItems {...props} />
+    </NavContainer>
+  );
 }
 
 export default Navbar
