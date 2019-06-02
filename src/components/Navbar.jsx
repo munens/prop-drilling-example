@@ -26,8 +26,8 @@ export class Navbar extends Component {
     } = this.props;
 
     return (
-      <NavContainer>
-        <NavLogo>logo</NavLogo>
+      <NavContainer theme={theme}>
+        <NavLogo textColor={theme.textColor}>logo</NavLogo>
         <NavItems {...this.props} />
       </NavContainer>
     );
