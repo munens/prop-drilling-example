@@ -12,10 +12,10 @@ const NavLogo = styled.div`
 const NavContainer = styled(Flex)`
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${({theme: {textColor}}) => textColor};
   height: 100px;
   padding: 20px;
-  background: ${({bgColor}) => bgColor};
+  background: ${({theme: {bgColor}}) => bgColor};
 `;
 
 export class Navbar extends Component {
@@ -26,7 +26,7 @@ export class Navbar extends Component {
     } = this.props;
 
     return (
-      <NavContainer bgColor={theme.bgColor}>
+      <NavContainer theme={theme}>
         <NavLogo textColor={theme.textColor}>logo</NavLogo>
         <NavItems {...this.props} />
       </NavContainer>

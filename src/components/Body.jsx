@@ -5,12 +5,13 @@ const BodyContainer = styled.div`
   padding: 20px;
   font-size: 18px;
   color: darkgrey;
+  background: ${({bgColor}) => bgColor};
 `;
 
 export class Body extends Component {
   render() {
     return (
-      <BodyContainer>
+      <BodyContainer bgColor={this.props.theme.bgColor}>
         Body
       </BodyContainer>
     )

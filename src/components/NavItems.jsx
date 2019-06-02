@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from '@emotion/styled';
-import { Flex } from './elements';
+import {Flex} from './elements';
 
 const ChangeThemeButton = styled.button`
   width: 100px;
@@ -19,24 +19,19 @@ const NavItemsContainer = styled(Flex)`
   width: 400px;
 `;
 
-export class NavItems extends Component {
-
-  render() {
-    const {
-      theme,
-      changeTheme
-    } = this.props;
-
-    return (
-      <NavItemsContainer>
-        <ChangeThemeButton
-          onClick={changeTheme}
-          bgColor={theme.bgColor}
-          textColor={theme.textColor}>Change Theme
-        </ChangeThemeButton>
-      </NavItemsContainer>
-    );
-  }
-}
+const NavItems = ({
+  theme,
+  changeTheme
+}) => {
+  return (
+    <NavItemsContainer>
+      <ChangeThemeButton
+        onClick={changeTheme}
+        bgColor={theme.bgColor}
+        textColor={theme.textColor}>Change Theme
+      </ChangeThemeButton>
+    </NavItemsContainer>
+  );
+};
 
 export default NavItems;

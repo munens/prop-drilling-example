@@ -34,7 +34,9 @@ export class App extends Component {
           theme={theme[this.state.theme]}
           changeTheme={this.changeTheme}
         />
-        <Body />
+        <Body
+          theme={theme[this.state.theme]}
+        />
       </Container>
     );
   }
