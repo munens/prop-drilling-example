@@ -21,4 +21,4 @@ export class BodyElements extends Component {
   }
 }
 
-export default BodyElements
+export default BodyElements;
